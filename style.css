@@ -1,0 +1,195 @@
+/* Author: Liangchen Song
+Author URL: https://lsongx.github.io/
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/ */
+
+:root {
+    --bg-color: #eee8d5;
+    --bg-color-highlight: #fdf6e3;
+    --bg-color-highlight2: #fdf3d6;
+    --text-color: #586e75;
+    --link-color: #268ad2;
+}
+
+
+body {
+    font-family: Titillium Web, Verdana, serif;
+    color: var(--text-color);
+    background-position:center; 
+    background: var(--bg-color);
+    line-height: 150%;
+}
+
+a {
+    box-shadow: none;
+    color: var(--link-color);
+    margin: 0 -.25rem;
+    padding: 0 .25rem;
+    transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
+    text-decoration: none;
+}
+a:hover {
+    box-shadow: inset 200px 0 0 0 var(--link-color);
+    color: white;
+}
+a.long:hover {
+    box-shadow: inset 1000px 0 0 0 var(--link-color);
+    color: white;
+}
+a.plain:hover {
+    box-shadow: none;
+    border-bottom: 1px dotted #cb4b16;
+}
+a.none {
+    color: var(--text-color);
+}
+a.none:hover{
+    color: var(--text-color);
+    box-shadow: none;
+}
+.textbox-hide{
+    background: var(--bg-color-highlight);
+    position: absolute;
+    top: auto;
+    left: auto;
+    display: none;
+    padding: 15 10px;
+    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.11);
+}
+a.textbox:hover{
+    color: var(--link-color);
+    box-shadow: none;
+    cursor: crosshair;
+}
+a.textbox:hover + .textbox-hide{
+    display: block;
+    z-index: 9;
+}
+.textbox-hide:hover{
+    display: block;
+    z-index: 9;
+}
+
+
+h2 {
+    font-weight: bold; 
+    color: var(--text-color);
+    border-bottom-style:solid; 
+    border-bottom-color: var(--text-color);
+    line-height: 2em;
+}
+p {
+    margin-top: 0em;
+    margin-bottom: 0em;      
+}
+.main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 780px;
+    box-shadow:  0px 5px 40px 17px rgba(0, 0, 0, 0.11);
+    background: var(--bg-color-highlight);
+    border-radius: 3px;
+}
+.content {
+    display: block; 
+    overflow: hidden;
+    padding: 5px 25px;
+}
+.highlight tr:hover {
+    background: var(--bg-color-highlight2);
+    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+}
+.comment {
+    display: none;
+    font-style: italic;
+    font-size: 80%;
+    color: #93a1a1;
+}
+.comment p {
+    margin-top: 0em;
+    margin-bottom: 0em;
+    font-family: Titillium Web, Verdana, serif;
+    line-height: 110%;
+    padding-bottom: 3pt;
+}
+.highlight tr:hover .comment {
+    /* display: block; */
+    display: none;
+}
+.hoverhide {
+    display: block;
+}
+.highlight tr:hover .hoverhide {
+    display: none;
+}
+.hovershow {
+    display: none;
+}
+.highlight tr:hover .hovershow {
+    display: block;
+}
+
+td.btn {
+    padding-top: 18pt;
+    vertical-align:middle;
+    font-weight: bold;
+    font-size: 18pt;
+}
+td.btn a:hover {
+    box-shadow: None;
+    color: #dc322f;
+    background: var(--bg-color-highlight2);
+}
+
+.cite {
+    font-family: monospace;
+    background: var(--bg-color-highlight2);
+    box-shadow:  0px 0px 5px 2px rgba(0, 0, 0, 0.11);
+    border-radius: 5px;
+    text-align: left;
+    line-height: 120%;
+}
+.cite pre {
+    position: relative;
+    border-radius:10px;
+    padding-top: 15px;
+    padding-left: 100px;
+}
+.cite button {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: .15rem;
+    background-color: var(--bg-color-highlight2);
+    color: var(--text-color);
+    border-radius: 5px;
+}
+.cite button:hover{
+    cursor:pointer;
+    background-color: var(--link-color);
+    color: white;
+}
+
+.video-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;  
+    position: relative;
+    width: 80%;
+    padding-bottom: calc(56.25% * 0.8); /* 16:9 */
+    height: 0;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.rainbow {
+    background: linear-gradient(to right, #ed3633, #fc719f, #7430ea, #008cff, #0083c5, #13af1b, #e3ba00, #ff9d00, #ed3633);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+}
